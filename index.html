@@ -26,7 +26,9 @@
 <script>
 	window.onload = function(){
 		console.log(window.navigator);
-	  document.getElementById('ua').innerHTML=JSON.stringify(window.navigator)
+		let a = window.navigator;
+		let b = JSON.stringify(a)
+	  document.getElementById('ua').innerHTML=b
 	}
 	</script>
 
