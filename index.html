@@ -21,10 +21,23 @@
 	 <a href="https://line.me/R/msg/text/?https://h5-test.yysports.com.tw/items/28342" style="font-size:30px;">加title后官网测试4</a><br/>
          <a onclick="()=> window.location.href = `https://line.me/R/msg/text/?${window.location.href}`">js自己测试  </a>
 	 <a id="ua"></a>
+	 <a id="app"></a>
  </section> 
 	
 <script>
+	function renderLink(){
+    var u = navigator.userAgent;
+    if (u.indexOf("iPhone") > -1 || u.indexOf("iOS") > -1) {
+      let a1 = "<a className='tipA' href='https://apps.apple.com/us/app/yysports/id1477928468' >下載YYsports App</a>"
+      document.getElementById('app').innerHTML= a1
+    }else{
+      
+      let a2 ="  <a className='tipA' href='https://play.google.com/store/apps/details?id=com.pousheng.yysports' >下載YYsports App</a>";
+      document.getElementById('app').innerHTML= a2
+    }
+  }
 	window.onload = function(){
+		renderLink();
 		console.log(window.navigator);
 		let a = window.navigator;
 		let b = JSON.stringify(a)
