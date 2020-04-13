@@ -26,6 +26,7 @@
  </section> 
 	
 <script>
+var u = navigator.userAgent;
 	function renderApp(){
 		if(u.indexOf("iPhone") > -1 || u.indexOf("iOS") > -1){
 		      var ifr = document.createElement("iframe");
@@ -40,7 +41,7 @@
 	}
 	
 	function renderLink(){
-    var u = navigator.userAgent;
+    
     if (u.indexOf("iPhone") > -1 || u.indexOf("iOS") > -1) {
 	    if(u.indexOf("Line")){
 		    let a1 = "<a className='tipA' href='https://apps.apple.com/us/app/yysports/id1477928468' >下載YYsports App</a>"
